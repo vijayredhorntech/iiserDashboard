@@ -2,7 +2,7 @@
 
 @section('main')
 
-    <div class=" text-md mb-0 sm:ml-64 lg:mt-12 md:mt-12 sm:mt-12 mt-24 bg-white">
+    <div class=" text-md mb-0 sm:ml-64 lg:mt-16 md:mt-16 sm:mt-16 mt-20 bg-white">
         <div class="bg-gray-200 w-full p-1">
             <span class="text-sm border-r-2 border-gray-400 px-2"><i class="fa-solid fa-home"></i></span>
             <span class="text-sm text-red-500 font-normal ml-4">Dashboard</span>
