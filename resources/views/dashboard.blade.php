@@ -1,4 +1,22 @@
 @extends('common.main')
+@push('custom-styles')
+    <style>
+        .dashboardButtons
+        {
+           background-color: transparent !important;
+        }
+        .dashboardButtons button
+        {
+            color: black !important;
+        }
+        .dashboardButtons button:focus
+        {
+            color: red !important;
+            background-color: white !important;
+        }
+    </style>
+
+@endpush
 
 @section('main')
 
@@ -341,14 +359,14 @@
                     <div class="mb-4 border-b border-gray-200">
 
                         <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
-                            <li class="mr-2 bg-white rounded-md p-0 hover:bg-gray-100" role="presentation">
-                                <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-800" data-tabs-target="#profile" type="button" role="tab" >Profile</button>
+                            <li class=" dashboardButtons active mr-2 bg-white rounded-md p-0 hover:bg-gray-100" role="presentation">
+                                <button class="inline-block py-2 px-4 border-b-2 border-transparent rounded-t-md hover:text-gray-600 hover:border-gray-800" data-tabs-target="#profile" type="button" role="tab" >Profile</button>
                             </li>
-                            <li class="mr-2 bg-white rounded-md p-0 hover:bg-gray-100" role="presentation">
-                                <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-800" data-tabs-target="#dashboard" type="button" role="tab" >Dashboard</button>
+                            <li class=" dashboardButtons mr-2 bg-white rounded-md p-0 hover:bg-gray-100" role="presentation">
+                                <button class="inline-block py-2 px-4 border-b-2 border-transparent rounded-t-md hover:text-gray-600 hover:border-gray-800" data-tabs-target="#dashboard" type="button" role="tab" >Dashboard</button>
                             </li>
-                            <li class="mr-2 bg-white rounded-md p-0 hover:bg-gray-100" role="presentation">
-                                <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-800" data-tabs-target="#user" type="button" role="tab" >New Users</button>
+                            <li class=" dashboardButtons mr-2 bg-white rounded-md p-0 hover:bg-gray-100" role="presentation">
+                                <button class="inline-block py-2 px-4 border-b-2 border-transparent rounded-t-md hover:text-gray-600 hover:border-gray-800" data-tabs-target="#user" type="button" role="tab" >New Users</button>
                             </li>
 
 
@@ -358,145 +376,23 @@
 
 
                     <div id="myTabContent">
-                        <div class="hidden p-4 rounded-lg bg-gray-50 " id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <div class="grid lg:grid-cols-8 md:grid-cols-2 grid-cols-2 gap-4  w-full">
-
+                        <div class="hidden p-2 rounded-lg bg-gray-50 " id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="grid lg:grid-cols-6 md:grid-cols-2 grid-cols-2 gap-4  w-full">
                                 <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" alt="">
+                                    <div class=" px-1 py-1 border-2 border-gray-900">
+                                        <img class="h-14 w-14 m-auto" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" alt="">
                                     </div>
                                     <div class="flex justify-center">
                                         <span class="m-auto text-red-600">Admin 1</span>
                                     </div>
                                 </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Admin 1</span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Admin 1</span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Admin 1</span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Admin 1</span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Admin 1</span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Admin 1</span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Admin 1</span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Admin 1</span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Admin 1</span>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
-                        <div class="hidden p-4 rounded-lg bg-gray-50 " id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
-                            <div class="grid lg:grid-cols-8 md:grid-cols-2 grid-cols-2 gap-4  w-full">
 
+                        <div class="hidden p-2 rounded-lg bg-gray-50 " id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                            <div class="grid lg:grid-cols-6 md:grid-cols-2 grid-cols-2 gap-4  w-full">
                                 <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://www.shutterstock.com/image-vector/dashboard-ui-data-hud-diagram-260nw-1913577490.jpg" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Dashboard</span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://www.shutterstock.com/image-vector/dashboard-ui-data-hud-diagram-260nw-1913577490.jpg" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Dashboard</span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://www.shutterstock.com/image-vector/dashboard-ui-data-hud-diagram-260nw-1913577490.jpg" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Dashboard</span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://www.shutterstock.com/image-vector/dashboard-ui-data-hud-diagram-260nw-1913577490.jpg" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Dashboard</span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://www.shutterstock.com/image-vector/dashboard-ui-data-hud-diagram-260nw-1913577490.jpg" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Dashboard</span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://www.shutterstock.com/image-vector/dashboard-ui-data-hud-diagram-260nw-1913577490.jpg" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Dashboard</span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
+                                    <div class=" py-1 px-1 border-2 border-gray-900">
                                         <img class="h-14 w-12 m-auto" src="https://www.shutterstock.com/image-vector/dashboard-ui-data-hud-diagram-260nw-1913577490.jpg" alt="">
                                     </div>
                                     <div class="flex justify-center">
@@ -506,114 +402,16 @@
 
                             </div>
                         </div>
-                        <div class="hidden p-4 rounded-lg bg-gray-50 " id="user" role="tabpanel" aria-labelledby="users-tab">
-                            <div class="grid lg:grid-cols-8 md:grid-cols-2 grid-cols-2 gap-4  w-full">
-
+                        <div class="hidden p-2 rounded-lg bg-gray-50 " id="user" role="tabpanel" aria-labelledby="users-tab">
+                            <div class="grid lg:grid-cols-6 md:grid-cols-2 grid-cols-2 gap-4  w-full">
                                 <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
+                                    <div class=" py-1 px-1 border-2 border-gray-900">
                                         <img class="h-14 w-12 m-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDJP1wbyGV9xQvRrPHKLAJ_C8MTzPeIDPwW_Ut8Po&s" alt="">
                                     </div>
                                     <div class="flex justify-center">
                                         <span class="m-auto text-red-600">Users 1 </span>
                                     </div>
                                 </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDJP1wbyGV9xQvRrPHKLAJ_C8MTzPeIDPwW_Ut8Po&s" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Users 1 </span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDJP1wbyGV9xQvRrPHKLAJ_C8MTzPeIDPwW_Ut8Po&s" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Users 1 </span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDJP1wbyGV9xQvRrPHKLAJ_C8MTzPeIDPwW_Ut8Po&s" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Users 1 </span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDJP1wbyGV9xQvRrPHKLAJ_C8MTzPeIDPwW_Ut8Po&s" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Users 1 </span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDJP1wbyGV9xQvRrPHKLAJ_C8MTzPeIDPwW_Ut8Po&s" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Users 1 </span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDJP1wbyGV9xQvRrPHKLAJ_C8MTzPeIDPwW_Ut8Po&s" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Users 1 </span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDJP1wbyGV9xQvRrPHKLAJ_C8MTzPeIDPwW_Ut8Po&s" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Users 1 </span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDJP1wbyGV9xQvRrPHKLAJ_C8MTzPeIDPwW_Ut8Po&s" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Users 1 </span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDJP1wbyGV9xQvRrPHKLAJ_C8MTzPeIDPwW_Ut8Po&s" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Users 1 </span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDJP1wbyGV9xQvRrPHKLAJ_C8MTzPeIDPwW_Ut8Po&s" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Users 1 </span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDJP1wbyGV9xQvRrPHKLAJ_C8MTzPeIDPwW_Ut8Po&s" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Users 1 </span>
-                                    </div>
-                                </div>
-                                <div class="bg-white flex justify-center flex-col">
-                                    <div class=" py-2 border-2 border-gray-900">
-                                        <img class="h-14 w-12 m-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDJP1wbyGV9xQvRrPHKLAJ_C8MTzPeIDPwW_Ut8Po&s" alt="">
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="m-auto text-red-600">Users 1 </span>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
                     </div>

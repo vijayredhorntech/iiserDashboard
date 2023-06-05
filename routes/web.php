@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LayoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,15 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-});
-Route::get('/admin', function () {
-    return view('admin');
-});
-Route::get('/subAdmin', function () {
-    return view('subAdmin');
-});
-Route::get('/vendorDashboard', function () {
-    return view('vendorDashboard');
-});
+
+
+        Route::get('/',[LayoutController::class,'dashboard'])->name('dashboardPage');
+        Route::get('/admin',[LayoutController::class,'admin'])->name('adminPage');
+        Route::get('/subAdmin',[LayoutController::class,'subAdmin'])->name('subAdminPage');
+        Route::get('/vendorDashboard',[LayoutController::class,'vendorDashboard'])->name('vendorDashboardPage');
+
+

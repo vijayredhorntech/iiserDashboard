@@ -16,6 +16,7 @@
 
 <x-common.sidebar/>
 
+
 @include('common.script')
 
 </body>
