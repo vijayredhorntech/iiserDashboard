@@ -74,7 +74,7 @@
             </li>
 
             <li>
-                <a href="#" class="flex items-center p-2 text-sm text-gray-500 rounded-md  hover:bg-blue-100 hover:text-indigo-900 font-medium ">
+                <a href="{{route('workFlow')}}" class="flex items-center p-2 text-sm rounded-md  hover:bg-blue-100 hover:text-indigo-900 font-medium {{ (\Request::route()->getName() == 'workFlow') ? 'bg-blue-100 text-indigo-900' : 'text-gray-500' }}">
                     <i class="fa-solid fa-credit-card"></i>
                     <span class="ml-3 ">New Work Flow</span>
                 </a>

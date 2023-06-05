@@ -20,5 +20,6 @@ use App\Http\Controllers\LayoutController;
         Route::get('/admin',[LayoutController::class,'admin'])->name('adminPage');
         Route::get('/subAdmin',[LayoutController::class,'subAdmin'])->name('subAdminPage');
         Route::get('/vendorDashboard',[LayoutController::class,'vendorDashboard'])->name('vendorDashboardPage');
+        Route::get('/workFlow',[LayoutController::class,'workFlow'])->name('workFlow');
 
 
