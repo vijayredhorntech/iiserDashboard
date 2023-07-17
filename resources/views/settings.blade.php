@@ -71,8 +71,8 @@
                         <div class=" w-full  py-4 px-2" >
                             <label for="fairPrice" class="block mb-2 text-md font-semibold text-gray-900 ">Default Fair Price</label>
                             <select  name="fairPrice" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-gray-400 focus:border-gray-400 block w-full p-2. " placeholder="Markup Type" required>
-                                <option value="public">Public Fair</option>
-                                <option value="private">Private Fair</option>
+                                <option value="publicfair">Public Fair</option>
+                                <option value="privatefair">Private Fair</option>
                             </select>
                         </div>
                     </form>
