@@ -6,20 +6,20 @@ use Illuminate\Http\Request;
 
 class LayoutController extends Controller
 {
-    public function dashboard(){
-        return view('dashboard');
+    public function flightBooking(){
+        return view('flightBooking');
     }
 
-    public function admin(){
-        return view('admin');
+    public function invoices(){
+        return view('invoice');
     }
 
-    public function subAdmin(){
-        return view('subAdmin');
+    public function clients(){
+        return view('clients');
     }
 
-    public function vendorDashboard(){
-        return view('vendorDashboard');
+    public function settings(){
+        return view('settings');
     }
     public function workFlow(){
 

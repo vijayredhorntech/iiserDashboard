@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>IISER-Dashboard</title>
+    <title>Cloud-Travels-Dashboard</title>
 
      @include('common.style')
 </head>
@@ -15,7 +15,6 @@
 <x-common.navbar/>
 
 <x-common.sidebar/>
-
 
 @include('common.script')
 

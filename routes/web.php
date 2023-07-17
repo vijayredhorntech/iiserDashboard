@@ -16,10 +16,10 @@ use App\Http\Controllers\LayoutController;
 
 
 
-        Route::get('/',[LayoutController::class,'dashboard'])->name('dashboardPage');
-        Route::get('/admin',[LayoutController::class,'admin'])->name('adminPage');
-        Route::get('/subAdmin',[LayoutController::class,'subAdmin'])->name('subAdminPage');
-        Route::get('/vendorDashboard',[LayoutController::class,'vendorDashboard'])->name('vendorDashboardPage');
+        Route::get('/',[LayoutController::class,'flightBooking'])->name('flightBookingPage');
+        Route::get('/admin',[LayoutController::class,'invoices'])->name('invoicesPage');
+        Route::get('/subAdmin',[LayoutController::class,'clients'])->name('clientsPage');
+        Route::get('/vendorDashboard',[LayoutController::class,'settings'])->name('settingPage');
         Route::get('/workFlow',[LayoutController::class,'workFlow'])->name('workFlow');
 
 
